@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Amazing Appendix Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .floating-fast {
+            animation: float 3s ease-in-out infinite;
+        }
+        .floating-slow {
+            animation: float 8s ease-in-out infinite;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle, rgba(255,240,245,0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .digestive-tube {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><path d="M10,50 Q50,20 90,50 T170,50" fill="none" stroke="%23ffb6c180" stroke-width="5" stroke-dasharray="3,3"/></svg>');
+            background-repeat: repeat-x;
+            opacity: 0.7;
+            z-index: -1;
+            animation: slide 60s linear infinite;
+        }
+        @keyframes slide {
+            0% { background-position: 0 0; }
+            100% { background-position: -200px 0; }
+        }
+        .organ-pulse {
+            animation: pulse 2s ease infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen font-sans text-gray-800 overflow-x-hidden">
+    <!-- Dynamic Background Elements -->
+    <div class="digestive-tube"></div>
+    
+    <!-- Floating bubbles -->
+    <div class="floating absolute top-20 left-10 w-12 h-12 rounded-full bg-blue-100 opacity-60"></div>
+    <div class="floating-slow absolute top-32 right-20 w-8 h-8 rounded-full bg-green-100 opacity-60"></div>
+    <div class="floating-fast absolute bottom-20 left-1/4 w-10 h-10 rounded-full bg-yellow-100 opacity-60"></div>
+    
+    <div class="container mx-auto px-4 py-8 relative">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-rose-600 mb-4 floating">
+                The Appendix Adventure!
+            </h1>
+            <div class="w-24 h-24 mx-auto organ-pulse">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/95df9230-2744-499c-9669-f97d9ddf59ef.png" alt="Cartoon appendix organ with friendly face wearing superhero cape" class="w-full h-full object-cover rounded-full border-4 border-rose-300" />
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-rose-500 mb-4 flex items-center">
+                    <span class="floating-fast mr-2">🧐</span>
+                    What is the Appendix?
+                </h2>
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-1/3 relative">
+                        <div class="floating-slow w-48 h-48">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4eaa7fa4-6a8e-49fb-9431-39d614726bb6.png" alt="Illustration showing the appendix location in the digestive system as a small finger-shaped pouch" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4 text-lg">
+                            The appendix is like a little pocket at the start of your large intestine! It's shaped like a tiny tube (about 2-4 inches long).
+                        </p>
+                        <p class="mb-4 text-lg">
+                            For a long time, doctors thought it was just a leftover part from our ancestors that didn't do anything special - kind of like your tonsils!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-rose-500 mb-4 flex items-center">
+                    <span class="floating mr-2">🌟</span>
+                    The Appendix's Secret Superpower!
+                </h2>
+                <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                    <div class="md:w-1/3 relative">
+                        <div class="floating w-48 h-48">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aeb629b9-f192-4071-8465-a5eb9245c29a.png" alt="Cartoon showing good bacteria cheering in the appendix with shields defending against bad bacteria" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4 text-lg">
+                            Scientists now think your appendix has an important job - it keeps your gut healthy by storing <span class="font-bold text-blue-600">good bacteria</span>!
+                        </p>
+                        <p class="mb-4 text-lg">
+                            When you get sick (like with diarrhea), some good bacteria get flushed away. Your appendix helps <span class="font-bold text-green-600">reboot</span> your digestive system by releasing stored good bacteria.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-rose-500 mb-4 flex items-center">
+                    <span class="floating-fast mr-2">⚠️</span>
+                    Appendix Alert!
+                </h2>
+                <div class="flex flex-col md:flex-row gap-6 items-center">
+                    <div class="md:w-1/3 relative">
+                        <div class="floating-slow w-48 h-48">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1621ffb4-287b-4027-bafd-2d809367c7a3.png" alt="Cartoon appendix with sad face holding its side in pain with dangerous germs attacking" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4 text-lg">
+                            Sometimes the appendix can get blocked and infected - this is called <span class="font-bold text-red-500">appendicitis</span>. When this happens:
+                        </p>
+                        <ul class="list-disc pl-6 mb-4 text-lg space-y-2">
+                            <li>It swells up like a balloon with too much air</li>
+                            <li>It can cause bad tummy pain (especially on the lower right side)</li>
+                            <li>Doctors might need to remove it with surgery</li>
+                        </ul>
+                        <p class="text-lg">
+                            Good news: People can live perfectly fine without an appendix!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Interactive Digestive Map -->
+            <section class="mb-8 bg-gradient-to-br from-rose-50 to-blue-50 rounded-2xl p-6">
+                <h2 class="text-2xl font-bold text-rose-500 mb-6 text-center">
+                    Find the Appendix!
+                </h2>
+                <div class="relative h-64 md:h-80 mx-auto max-w-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/098e2614-8d05-4d3a-b7aa-64f0a1de372f.png" alt="Simplified digestive system map showing path from mouth to stomach to small intestine with appendix marked on large intestine" class="w-full h-full object-contain" />
+                    <button id="show-appendix" class="absolute px-4 py-2 bg-amber-400 hover:bg-amber-500 text-white font-bold rounded-full shadow-lg transition-all duration-300 hover:scale-105" style="bottom: 20%; left: 65%;">
+                        Show Appendix!
+                    </button>
+                    <div id="appendix-spotlight" class="absolute w-16 h-16 bg-yellow-200 rounded-full opacity-0 flex items-center justify-center font-bold transition-all duration-500" style="bottom: 30%; left: 70%;">
+                        Here!
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Meet the Appendix Crew -->
+            <section class="mt-12">
+                <h2 class="text-2xl font-bold text-rose-500 mb-6 text-center">
+                    The Digestive Dream Team
+                </h2>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                    <div class="w-20 md:w-24 floating">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3fb008ec-ad7d-4786-a06c-2b51f085e9b0.png" alt="Happy stomach cartoon character with arms waving" class="w-full h-full object-cover rounded-full border-4 border-blue-300" />
+                        <p class="text-center mt-2 font-medium">Stomach</p>
+                    </div>
+                    <div class="w-20 md:w-24 floating-fast">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dcc4bb53-d4e8-4f2c-9b85-3f79655312e5.png" alt="Smart small intestine cartoon wearing glasses" class="w-full h-full object-cover rounded-full border-4 border-purple-300" />
+                        <p class="text-center mt-2 font-medium">Small Intestine</p>
+                    </div>
+                    <div class="w-20 md:w-24 organ-pulse relative">
+                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center animate-bounce">⭐</div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/abf15e25-63a4-4db9-858c-38c90eb0accb.png" alt="Cartoon appendix waving and smiling proudly" class="w-full h-full object-cover rounded-full border-4 border-rose-300" />
+                        <p class="text-center mt-2 font-medium">Appendix</p>
+                    </div>
+                    <div class="w-20 md:w-24 floating-slow">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0066568b-61a4-4891-acfb-570e23f15654.png" alt="Large intestine cartoon shaped like a tube with pockets" class="w-full h-full object-cover rounded-full border-4 border-green-300" />
+                        <p class="text-center mt-2 font-medium">Large Intestine</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-gray-600 text-sm">
+            <p>Made with ❤️ by your friendly neighborhood doctor-bots</p>
+            <p class="mt-2">Remember: Always talk to a real doctor if you have tummy troubles!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple interactive element - no quiz!
+        document.getElementById('show-appendix').addEventListener('click', function() {
+            const spotlight = document.getElementById('appendix-spotlight');
+            spotlight.style.opacity = '0.8';
+            spotlight.style.transform = 'scale(2)';
+            
+            setTimeout(() => {
+                spotlight.style.opacity = '0';
+                spotlight.style.transform = 'scale(1)';
+            }, 1500);
+        });
+        
+        // Make the organ characters randomly wiggle a bit
+        document.querySelectorAll('.floating, .floating-fast, .floating-slow').forEach(el => {
+            setInterval(() => {
+                const wiggleX = Math.random() * 10 - 5;
+                const wiggleY = Math.random() * 10 - 5;
+                el.style.transform = `translate(${wiggleX}px, ${el.style.transform.includes('translateY') ? el.style.transform.match(/translateY\(([^)]+)\)/)[1] : '-20px'})`;
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
+
